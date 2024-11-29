@@ -44,8 +44,8 @@
   .dark-background {
     background: linear-gradient(
       to right,
-      var(--white-color) 85%,
-      var(--main-color) 15%
+      var(--white-color) 100%,
+      var(--main-color) 0%
     );
   }
 }
