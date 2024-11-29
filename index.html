@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Banco" />
+    <meta name="keywords" content="Banco" />
+    <title>BanCo</title>
+    <link href="assets/imgs/logo/Banco-logo.svg" rel="icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Vendor CSS Files -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="index-page">
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Start Header Nav -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-5">
+          <!-- comment the line below if you want to use sitename only -->
+          <img src="assets/imgs/logo/Banco-logo.svg" alt="Logo" />
+          <h2>Ban<span>Co</span></h2>
+        </a>
+        <nav id="navmenu" class="navmenu ms-5">
+          <ul>
+            <li><a href="#about" class="active">About Us</a></li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#faq">Faq's</a></li>
+            <li><a href="#download">Download</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        <a class="custom-btn-light ms-auto" href="#about">Get Started</a>
+      </div>
+    </header>
+    <!-- End Header Nav -->
+
+    <main class="main">
+      <!-- Start Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <div class="container">
+          <div class="row">
+            <!-- Hero Content -->
+            <div
+              class="col-lg-9 order-2 order-lg-1 d-flex flex-column justify-content-center"
+              data-aos="zoom-out"
+            >
+              <h2 class="w-50 hero-heading">Your journey to better credit</h2>
+              <h2 class="focused">Starts here</h2>
+              <p class="w-75 hero-p">
+                Think the credit system is stacked against you? So do we. We'll
+                help you <br />get the credit you deserve.
+              </p>
+              <div class="d-flex btns-store">
+                <a href="" class="btn-store">
+                  <img src="assets/imgs/icons/applestroe.svg" alt="" />
+                </a>
+                <a href="" class="btn-store">
+                  <img src="assets/imgs/icons/playstore.svg" alt="" />
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div
+              class="col-lg-3 order-1 order-lg-2 hero-img"
+              data-aos="zoom-out"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/imgs/header/iphone.png"
+                class="animated"
+                alt="header-iamge"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Hero Section -->
+
+      <!-- Start Clients Section -->
+      <section id="clients" class="clients section">
+        <div class="container-fluid" data-aos="zoom-in">
+          <div class="swiper init-swiper">
+            <!-- Swiper Configuaration -->
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  }
+                }
+              }
+            </script>
+            <!-- Swiper Images -->
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img
+                  src="assets/imgs/brands/dribble.svg"
+                  class="img-fluid"
+                  alt="dribble"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/imgs/brands/youtube.svg"
+                  class="img-fluid"
+                  alt="youtube"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/imgs/brands/webflow.svg"
+                  class="img-fluid"
+                  alt="webflow"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/imgs/brands/behance.svg"
+                  class="img-fluid"
+                  alt="behance"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Clients Section -->
+
+      <!-- Start About Section -->
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- About Image -->
+            <div
+              class="col-lg-6 col-xs-12 about-img"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/imgs/about/about-phone-screen.png"
+                alt="bout-phone-screen"
+              />
+            </div>
+            <!-- About Content -->
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <h2>Empower Cash Advance</h2>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Instant delivery</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Receive up to $250 today</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>No interest, no late fees, no credit checks</span>
+                </li>
+              </ul>
+              <a href="#" class="custom-btn-dark">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- Start Info Section -->
+      <section id="info" class="info section dark-section">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Info Content -->
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <h2>External Checking Account</h2>
+              <p>
+                Keep your current bank and have your Empower Cash Advance or
+                Empower Thrive funds deposited to your primary bank account.
+              </p>
+              <p>
+                Keep your current bank and have your Empower Cash Advance or
+                Empower Thrive funds deposited to your primary bank account.
+              </p>
+              <a href="#" class="custom-btn-light">Learn More</a>
+            </div>
+            <!-- Info Image -->
+            <div
+              class="col-lg-6 info-img"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/imgs/about/about-phone-screen.png"
+                alt="info-phone"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Info Section -->
+
+      <!-- Start Trust Section -->
+      <section id="trust" class="trust section">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Trust Image -->
+            <div
+              class="col-lg-6 trust-img"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img
+                src="assets/imgs/about/about-phone-screen.png"
+                alt="trust-phone"
+              />
+            </div>
+            <!-- Trust Content -->
+            <div
+              class="col-md-6 col-sm-12 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <h2>Used and trusted by a community of millions</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit in
+                consequat sollicitudin adipiscing facilisi sit et hendrerit diam
+              </p>
+
+              <div class="row mt-5">
+                <div class="col-6">
+                  <div class="trust-box">
+                    <h2>12+</h2>
+                    <p>Years Experience</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="trust-box">
+                    <h2>90%</h2>
+                    <p>Commited Users</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="trust-box">
+                    <h2>10M</h2>
+                    <p>Active Users</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="trust-box">
+                    <h2>250M</h2>
+                    <p>Transactions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Trust Section -->
+
+      <!-- Start Features Section -->
+      <section id="feature" class="feature section">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Features Content -->
+            <div
+              class="col-lg-6 content"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <h2>We believe credit should be more accessible</h2>
+              <ul>
+                <li>
+                  <i class="bi bi-heart"></i>
+                  <span>Cash whenever you need it</span>
+                </li>
+                <li>
+                  <i class="bi bi-heart"></i>
+                  <span>Opportunity to improve your credit</span>
+                </li>
+                <li>
+                  <i class="bi bi-heart"></i>
+                  <span>No credit score or security deposit to qualify</span>
+                </li>
+              </ul>
+              <a href="#" class="custom-btn-dark">Learn More</a>
+            </div>
+            <!-- Features Image -->
+            <div
+              class="col-lg-6 feature-img"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <img src="assets/imgs/header/iphone-02.png" alt="feature-phone" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Features Section -->
+
+      <!-- Start Testimonial Section -->
+      <section class="testimonial-section section">
+        <div class="container">
+          <div class="row">
+            <!-- Testimonial Heading -->
+            <div class="col-lg-6">
+              <div class="about_content">
+                <div class="background_layer"></div>
+                <div class="layer_content">
+                  <div class="section_title">
+                    <h2>
+                      Trusted by millions of
+                      <strong>Customers & Clients</strong>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Testimonial Content -->
+            <div class="col-lg-6">
+              <div class="testimonial_box">
+                <div class="testimonial_container">
+                  <div class="background_layer"></div>
+                  <div class="layer_content">
+                    <div class="testimonial_owlCarousel owl-carousel">
+                      <div class="testimonials">
+                        <div class="testimonial_content">
+                          <div class="testimonial_caption">
+                            <h6>Robert Clarkson</h6>
+                            <span>CEO, Axura</span>
+                          </div>
+                          <p>
+                            The team at Banco industry is very talented,
+                            dedicated, well organized and knowledgeable. I was
+                            most satisfied with the quality of the workmanship.
+                            They did excellent work.
+                          </p>
+                        </div>
+                        <div class="images_box">
+                          <div class="testimonial_img">
+                            <img
+                              class="img-center"
+                              src="assets/imgs/customers/customer-01.jpg"
+                              alt="client name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials">
+                        <div class="testimonial_content">
+                          <div class="testimonial_caption">
+                            <h6>Robert Clarkson</h6>
+                            <span>CEO, Axura</span>
+                          </div>
+                          <p>
+                            The team at Banco industry is very talented,
+                            dedicated, well organized and knowledgeable. I was
+                            most satisfied with the quality of the workmanship.
+                            They did excellent work.
+                          </p>
+                        </div>
+                        <div class="images_box">
+                          <div class="testimonial_img">
+                            <img
+                              class="img-center"
+                              src="assets/imgs/customers/customer-02.jpg"
+                              alt="client name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="testimonials">
+                        <div class="testimonial_content">
+                          <div class="testimonial_caption">
+                            <h6>Robert Clarkson</h6>
+                            <span>CEO, Axura</span>
+                          </div>
+                          <p>
+                            The team at Banco industry is very talented,
+                            dedicated, well organized and knowledgeable. I was
+                            most satisfied with the quality of the workmanship.
+                            They did excellent work.
+                          </p>
+                        </div>
+                        <div class="images_box">
+                          <div class="testimonial_img">
+                            <img
+                              class="img-center"
+                              src="assets/imgs/customers/customer-03.jpg"
+                              alt="client name"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Testimonial Section -->
+
+      <!-- Start Faq Section -->
+      <section
+        id="faq"
+        class="section faq light-background"
+        data-builder="section"
+      >
+        <div class="container-fluid">
+          <div class="row gy-4">
+            <!-- Faq Dropdowns content -->
+            <div
+              class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1"
+            >
+              <div
+                class="content px-xl-5"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h2>
+                  <span>Got Questions? </span
+                  ><strong>We've Got Answers!</strong>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+
+              <div
+                class="faq-container px-xl-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="faq-item faq-active">
+                  <h3>
+                    <span>01</span> Non consectetur a erat nam at lectus urna
+                    duis?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna
+                      id volutpat lacus laoreet non curabitur gravida. Venenatis
+                      lectus magna fringilla urna porttitor rhoncus dolor purus
+                      non.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span>02</span> Feugiat scelerisque varius morbi enim nunc
+                    faucibus a pellentesque?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Dolor sit amet consectetur adipiscing elit pellentesque
+                      habitant morbi. Id interdum velit laoreet id donec
+                      ultrices. Fringilla phasellus faucibus scelerisque
+                      eleifend donec pretium. Est pellentesque elit ullamcorper
+                      dignissim. Mauris ultrices eros in cursus turpis massa
+                      tincidunt dui.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span>03</span> Dolor sit amet consectetur adipiscing elit
+                    pellentesque?
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices
+                      sagittis orci. Faucibus pulvinar elementum integer enim.
+                      Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
+                      tellus pellentesque eu tincidunt. Lectus urna duis
+                      convallis convallis tellus. Urna molestie at elementum eu
+                      facilisis sed odio morbi quis
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+              </div>
+            </div>
+            <!-- Faq Image -->
+            <div class="col-lg-5 order-1 order-lg-2 faq-img">
+              <img
+                src="assets/imgs/header/iphone.png"
+                class="img-fluid"
+                alt="faq-image"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Faq Section -->
+
+      <!-- Start Download Section -->
+      <section id="download" class="download section">
+        <div class="container">
+          <div class="row gy-4 text-center">
+            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-title">
+                <h2>
+                  Download <span class="text-white">BanCo</span><br />to get
+                  started
+                </h2>
+              </div>
+              <div
+                class="d-flex justify-content-center align-content-center btns-store"
+              >
+                <a href="#footer" class="btn-store">
+                  <img
+                    src="assets/imgs/icons/applestroe.svg"
+                    alt="applestroe-image"
+                  />
+                </a>
+                <a href="#footer" class="btn-store">
+                  <img
+                    src="assets/imgs/icons/playstore.svg"
+                    alt="playstore-image"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Download Section -->
+    </main>
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <a href="index.html" class="logo d-flex align-items-center me-5">
+                <img
+                  src="assets/imgs/logo/Banco-logo-light.svg"
+                  alt="logo"
+                  class="me-2"
+                />
+                <h2 class="text-white mt-1">BanCo</h2>
+              </a>
+            </a>
+            <div class="footer-contact pt-1">
+              <p>
+                Lorem ipsum dolor sit amet adipiscin eli a sit facilisis
+                volutpat interdum.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 class="text-white">About</h4>
+            <ul>
+              <li>
+                <a href="#faq">FAQ</a>
+              </li>
+              <li><a href="#footer">Support</a></li>
+              <li>
+                <a href="#footer">Terms of services</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 class="text-white">Download App</h4>
+            <ul>
+              <li>
+                <a href="#download"
+                  ><i class="bi bi-apple text-white me-2"></i>App Store</a
+                >
+              </li>
+              <li>
+                <a href="#download"
+                  ><i class="bi bi-google-play text-white me-2"></i>Google
+                  Play</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 class="text-white">Contact</h4>
+            <ul>
+              <li>
+                <a href="#download"
+                  ><i class="bi bi-envelope-fill text-white me-2"></i
+                  >test@test.com</a
+                >
+              </li>
+              <li>
+                <a href="#download"
+                  ><i class="bi bi-telephone-fill text-white me-2"></i
+                  >+123456789</a
+                >
+              </li>
+              <li>
+                <a href="#download"
+                  ><i class="bi bi-geo-alt-fill text-white me-2"></i>Los
+                  Angeles, CA</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-3 footer-links">
+            <h4 class="text-white">Follow Us</h4>
+            <div class="social-links d-flex">
+              <a href="#download"><i class="bi bi-twitter-x"></i></a>
+              <a href="#download"><i class="bi bi-facebook"></i></a>
+              <a href="#download"><i class="bi bi-instagram"></i></a>
+              <a href="#download"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <a
+            href="https://kariim-portfolio.vercel.app/"
+            target="_blank"
+            class="author-name"
+            >Kariim</a
+          >
+          <span
+            >All Rights Reserved
+            <!-- Year function to get the current year  -->
+            <script>
+              function getCurrentYear() {
+                return new Date().getFullYear();
+              }
+              // Set the year dynamically when the page loads
+              document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("year").textContent = getCurrentYear();
+              });
+            </script>
+            <span id="year"></span
+          ></span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+    ></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
