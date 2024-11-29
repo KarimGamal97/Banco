@@ -236,6 +236,7 @@
       }
     });
   }
+  // Testimonials Scroll
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
   $(".testimonial_owlCarousel").owlCarousel({
