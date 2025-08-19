@@ -1,7 +1,7 @@
 /**
- * Template Name: BanCo
+ * Template Name: Bankly
  * Template URL:
- * Updated: Dec 01 2024 with Bootstrap v5.3.3
+ * Updated: Aug 01 2025 with Bootstrap v5.3.3
  * Author: Kariim >> https://kariim-portfolio.vercel.app/
  */
 
