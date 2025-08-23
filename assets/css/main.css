@@ -9,20 +9,21 @@
 # Font & Color Variables
 --------------------------------------------------------------*/
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-  --default-font: "Inter", sans-serif;
-  --heading-font: "Inter", sans-serif;
-  --nav-font: "Inter", sans-serif;
+  --default-font: "Roboto", sans-serif;
+  --heading-font: "Roboto", sans-serif;
+  --nav-font: "Roboto", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --white-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --main-color: #14213d; /* Default color used for the majority of the text content across the entire website */
+  --main-color: #5bb5a2; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
-  --second-color: #fca311; /* Second color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --alt-heading-color: #262626; /* Another Color for headings and titles makes your website more comfortable when scrolling */
+  --second-color: #d6ae7b; /* Second color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --alt-heading-color: #1a191e; /* Another Color for headings and titles makes your website more comfortable when scrolling */
+  --p-color: #828186; /*  Color for Paragraphs and block of words under any heading or title */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -65,6 +66,26 @@ a {
   transition: 0.3s;
 }
 
+h1 {
+  font-size: clamp(16px, 4rem, 60px);
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(16px, 3rem, 40px);
+}
+h3 {
+  font-size: clamp(16px, 2.5rem, 35px);
+}
+h4 {
+  font-size: clamp(16px, 2rem, 30px);
+}
+h5 {
+  font-size: clamp(16px, 1.5rem, 20px);
+}
+h6 {
+  font-size: clamp(16px, 1rem, 20px);
+}
+
 h1,
 h2,
 h3,
@@ -96,7 +117,6 @@ h6 {
 }
 
 .header .logo h2 {
-  font-size: 30px;
   margin: 0;
   font-weight: 500;
   color: var(--heading-color);
@@ -106,20 +126,22 @@ h6 {
 }
 
 .header .logo h2 span {
-  color: var(--second-color);
+  color: var(--main-color);
 }
 
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
   }
-  .header .custom-btn-light {
+  .header .custom-btn-light,
+  .header .custom-btn-dark {
     order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
   }
   @media (max-width: 768px) {
-    .header .custom-btn-light {
+    .header .custom-btn-light,
+    .header .custom-btn-dark {
       visibility: hidden;
     }
   }
@@ -139,7 +161,7 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  background-color: var(--main-color);
+  background-color: var(--alt-heading-color);
 }
 .index-page.scrolled .header .logo h2,
 .index-page.scrolled .header .navmenu li a:not(.active) {
@@ -171,7 +193,7 @@ h6 {
   .navmenu a:focus {
     color: var(--heading-color);
     padding: 18px 15px;
-    font-size: 15px;
+
     font-family: var(--nav-font);
     font-weight: 600;
     display: flex;
@@ -196,7 +218,7 @@ h6 {
   .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--second-color);
+    color: var(--main-color);
   }
 
   .navmenu .dd-box-shadow {
@@ -316,7 +338,7 @@ h6 {
 .footer {
   color: var(--white-color);
   background-color: var(--alt-heading-color);
-  font-size: 14px;
+
   position: relative;
 }
 
@@ -332,7 +354,7 @@ h6 {
   height: 40px;
   border-radius: 50%;
   border: 1px solid color-mix(in srgb, var(--heading-color), transparent 50%);
-  font-size: 16px;
+
   color: color-mix(in srgb, var(--white-color), transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
@@ -344,7 +366,6 @@ h6 {
 }
 
 .footer h4 {
-  font-size: 16px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
@@ -389,7 +410,7 @@ h6 {
 
 .footer .footer-about a {
   color: var(--heading-color);
-  font-size: 28px;
+
   font-weight: 600;
   text-transform: uppercase;
   font-family: var(--heading-font);
@@ -412,7 +433,6 @@ h6 {
 
 .footer .credits {
   margin-top: 6px;
-  font-size: 13px;
 }
 .author-name {
   text-decoration: none;
@@ -474,7 +494,7 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--second-color);
+  color: var(--alt-heading-color);
   line-height: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -508,6 +528,12 @@ section,
   overflow: clip;
 }
 
+@media (max-width: 768px) {
+  section,
+  .section {
+    padding: 30px 0;
+  }
+}
 @media (max-width: 1199px) {
   section,
   .section {
@@ -523,7 +549,9 @@ section,
   padding: 10px 15px 0px 0px;
   transition: 0.5s;
 }
-
+.btn-store img {
+  width: 160px;
+}
 .btn-store:hover {
   transform: translateY(2px);
 }
@@ -543,7 +571,7 @@ section,
   align-content: center;
   font-weight: 500;
   transition: 0.3s;
-  box-shadow: 7px 7px 0px var(--second-color);
+  box-shadow: 7px 7px 0px var(--main-color);
   display: block;
   font-weight: bold;
 }
@@ -556,6 +584,7 @@ section,
 .custom-btn-light {
   color: var(--heading-color);
   background: var(--white-color);
+  box-shadow: 7px 7px 0px var(--heading-color);
 }
 
 .custom-btn-light:hover,
@@ -576,7 +605,6 @@ section,
 }
 
 .section-title h2 {
-  font-size: 50px;
   font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -597,6 +625,7 @@ section,
   padding: 120px 0 60px 0;
   display: flex;
   align-items: center;
+  height: 100vh;
 }
 @media (max-width: 991px) {
   .hero {
@@ -612,19 +641,27 @@ section,
 
 .hero h2 {
   margin: 0;
-  font-size: 48px;
   font-weight: 700;
   line-height: 56px;
+}
+.hero .hero-p {
+  font-size: clamp(16px, 0.5rem, 20px);
+  text-wrap: balance;
+  color: var(--p-color);
 }
 @media (max-width: 991px) {
   .hero-heading,
   .hero-p {
     width: 100% !important;
   }
+  .hero h2 {
+    line-height: 42px;
+  }
 }
 .hero .focused {
-  background-color: var(--second-color);
+  background-color: var(--main-color);
   width: fit-content;
+  padding: 10px 0;
 }
 .hero p {
   color: var(--heading-color);
@@ -640,12 +677,10 @@ section,
 
 @media (max-width: 640px) {
   .hero h2 {
-    font-size: 28px;
     line-height: 36px;
   }
 
   .hero p {
-    font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -714,7 +749,6 @@ section,
   }
 }
 .about .content h2 {
-  font-size: 40px;
   margin-bottom: 30px;
 }
 
@@ -767,7 +801,6 @@ section,
 }
 
 .info .content h2 {
-  font-size: 36px;
   margin-bottom: 20px;
   color: var(--white-color);
 }
@@ -775,6 +808,7 @@ section,
 /*--------------------------------------------------------------
 # Trust Section
 --------------------------------------------------------------*/
+
 .trust .trust-img {
   background: linear-gradient(
     to top,
@@ -796,8 +830,8 @@ section,
   }
 }
 .trust .content h2 {
-  font-size: 45px;
   margin-bottom: 20px;
+  color: var(--main-color);
 }
 .trust .content .trust-box {
   background-color: var(--white-color);
@@ -808,7 +842,7 @@ section,
 }
 .trust .content .trust-box h2 {
   font-weight: bold;
-  font-size: 36px;
+  color: var(--black-color);
 }
 .trust .content .trust-box p {
   font-weight: 700;
@@ -827,14 +861,14 @@ section,
   content: "";
 }
 .testimonial-section .about_content {
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   padding-top: 77px;
   padding-right: 210px;
   padding-bottom: 62px;
   position: relative;
 }
 .testimonial-section .about_content .background_layer {
-  background-color: var(--main-color);
+  background-color: var(--second-color);
   width: auto;
   margin-left: -200px;
   right: 0;
@@ -858,7 +892,6 @@ section,
   color: var(--white-color);
   font-family: var(--default-font);
   font-weight: 400;
-  font-size: 15px;
   line-height: 28px;
   margin-top: -5px;
   margin-bottom: 6px;
@@ -866,7 +899,6 @@ section,
 .testimonial-section .about_content .layer_content .section_title h2 {
   font-family: var(--default-font);
   font-weight: 300;
-  font-size: 45px;
   line-height: 50px;
   padding-bottom: 51px;
   margin-bottom: 0px;
@@ -954,7 +986,7 @@ section,
   position: relative;
 }
 .testimonial-section .testimonial_box .testimonial_container .background_layer {
-  background-color: var(--second-color);
+  background-color: var(--main-color);
   width: auto;
   margin-right: -200px;
   right: 0;
@@ -1043,7 +1075,6 @@ section,
   h6 {
   padding-top: 0;
   margin-bottom: -5px;
-  font-size: 19px;
   font-weight: 600;
   line-height: 24px;
   color: #020d26;
@@ -1205,8 +1236,11 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.feature {
+  background-color: #f7f7f7;
+}
 .feature .feature-img {
-  background: linear-gradient(to top, var(--second-color) 50%, #fff 50%);
+  background: linear-gradient(to top, var(--second-color) 50%, transparent 50%);
   text-align: center;
 }
 .feature .feature-img img {
@@ -1222,7 +1256,6 @@ section,
   }
 }
 .feature .content h2 {
-  font-size: 36px;
   margin-bottom: 20px;
 }
 
@@ -1251,12 +1284,32 @@ section,
   margin-right: 10px;
 }
 /*--------------------------------------------------------------
+# Cards Section
+--------------------------------------------------------------*/
+.cards {
+  background-color: #f7f7f7;
+}
+.cards h4 {
+  font-size: 26px;
+}
+
+.cards h4 span {
+  color: #5bb5a2;
+  padding: 0.4rem;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #e8f2ee;
+}
+.cards p {
+  color: #868588;
+}
+
+/*--------------------------------------------------------------
 # Download Section
 --------------------------------------------------------------*/
 .download {
   background-color: var(--second-color);
 }
-
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
@@ -1362,8 +1415,5 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.faq .faq-img img {
-  max-height: 70%;
+  align-self: flex-start;
 }
